@@ -114,7 +114,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         final Activity act = getActivity();
     }
 
-  @Override
+    @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference.getKey().equals(KEY_FIRMWARE_VERSION)) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
