@@ -54,8 +54,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_CONTRIBUTORS = "contributors";
     private static final String KEY_TERMS = "terms";
     private static final String KEY_LICENSE = "license";
-    private static final String KEY_COPYRIGHT = "copyright";
-    private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
     private static final String KEY_BUILD_NUMBER = "build_number";
@@ -67,8 +65,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
 
     private static final String KEY_MOD_VERSION = "mod_version";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
-
-    private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
 
     long[] mHits = new long[3];
 
@@ -116,34 +112,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
          * info.
          */
         final Activity act = getActivity();
-        // These are contained in the "container" preference group
-        PreferenceGroup parentPreference = (PreferenceGroup) findPreference(KEY_CONTAINER);
-        Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference, KEY_TERMS,
-                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-        Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference, KEY_LICENSE,
-                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-        Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference, KEY_COPYRIGHT,
-                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-        Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference, KEY_TEAM,
-                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-
-        // These are contained by the root preference screen
-        parentPreference = getPreferenceScreen();
-        Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
-                KEY_SYSTEM_UPDATE_SETTINGS,
-                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-        Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference, KEY_CONTRIBUTORS,
-                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-
-        // Read platform settings for additional system update setting
-        boolean isUpdateSettingAvailable =
-                getResources().getBoolean(R.bool.config_additional_system_update_setting_enable);
-        if (isUpdateSettingAvailable == false) {
-            getPreferenceScreen().removePreference(findPreference(KEY_UPDATE_SETTING));
-        }
     }
 
-    @Override
+  @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference.getKey().equals(KEY_FIRMWARE_VERSION)) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
