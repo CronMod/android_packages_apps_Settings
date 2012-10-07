@@ -38,12 +38,14 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
     private static final String TAG = "DisplayRotation";
 
     private static final String KEY_ACCELEROMETER = "accelerometer";
+    private static final String KEY_ACCELEROMETER_LOCKSCREEN = "accelerometer_lockscreen";
     private static final String ROTATION_0_PREF = "display_rotation_0";
     private static final String ROTATION_90_PREF = "display_rotation_90";
     private static final String ROTATION_180_PREF = "display_rotation_180";
     private static final String ROTATION_270_PREF = "display_rotation_270";
 
     private CheckBoxPreference mAccelerometer;
+    private CheckBoxPreference mAccelerometerLS;
     private CheckBoxPreference mRotation0Pref;
     private CheckBoxPreference mRotation90Pref;
     private CheckBoxPreference mRotation180Pref;
@@ -63,9 +65,6 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        boolean hasRotationLock = this.getResources().getBoolean(com.android
-                .internal.R.bool.config_hasRotationLockSwitch);
-
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.display_rotation);
@@ -75,9 +74,10 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
         mAccelerometer = (CheckBoxPreference) findPreference(KEY_ACCELEROMETER);
         mAccelerometer.setPersistent(false);
 
-        if (hasRotationLock) {
-                mAccelerometer.setEnabled(false);
-        }
+        mAccelerometerLS = (CheckBoxPreference) findPreference(KEY_ACCELEROMETER_LOCKSCREEN);
+        mAccelerometerLS.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.ACCELEROMETER_LOCKSCREEN_ROTATION, 1) == 1);
+
         mRotation0Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_0_PREF);
         mRotation90Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_90_PREF);
         mRotation180Pref = (CheckBoxPreference) prefSet.findPreference(ROTATION_180_PREF);
@@ -138,6 +138,11 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
             } catch (RemoteException exc) {
                 Log.w(TAG, "Unable to save auto-rotate setting");
             }
+        } else if (preference == mAccelerometerLS) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.ACCELEROMETER_LOCKSCREEN_ROTATION,
+                    mAccelerometerLS.isChecked() ? 1 : 0);
+            return true;
         } else if (preference == mRotation0Pref ||
                 preference == mRotation90Pref ||
                 preference == mRotation180Pref ||
