@@ -1854,6 +1854,11 @@
     <string name="link_volume_ringtones">"Vincular\nvolúmenes"</string>
     <string name="link_volume_ringtones_toast">"Asegurese de establecer de nuevo el volumen para igualar los volúmenes de notificación y de tono del teléfono."</string>
     <string name="link_volume_mutes">"Vincular\nsilencio"</string>
+    <string name="sound_camera_shutter_disable_title">Silenciar obturador</string>
+    <string name="sound_camera_shutter_disable_summary_on">El sonido del obturador no será reproducido</string>
+    <string name="sound_camera_shutter_disable_summary_off">El sonido del obturador será reproducido</string>
+    <string name="sound_camera_shutter_disable_warning_title">CUIDADO: Esto puede ser ilegal</string>
+    <string name="sound_camera_shutter_disable_warning">Desactivar el sonido al hacer una foto es ilegal en algunos paises o lugares. ¿Estás seguro de querer desactivarlo?</string>
 
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">"Modo 'Tranquilidad'"</string>
