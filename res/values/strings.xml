@@ -800,6 +800,10 @@
     <string name="notification_light_missed_call_title">Missed call</string>
     <string name="notification_light_voicemail_title">Voicemail</string>
 
+    <!-- Enable/Disable the software navigation buttons -->
+    <string name="has_navigation_bar_title">Sofware navigation bar</string>
+    <string name="has_navigation_bar_summary">Display the ICS on screen software keys (Reboot required)</string>
+
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
     <string name="pulse_speed_title">Pulse length and speed</string>

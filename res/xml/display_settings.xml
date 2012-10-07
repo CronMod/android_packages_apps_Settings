@@ -47,6 +47,12 @@
             android:title="@string/notification_pulse_title"
             android:fragment="com.android.settings.notificationlight.NotificationLightSettings" />
 
+        <CheckBoxPreference
+            android:key="has_navigation_bar"
+            android:title="@string/has_navigation_bar_title"
+            android:summary="@string/has_navigation_bar_summary"
+            android:persistent="false" />
+
         <PreferenceScreen
             android:key="battery_light"
             android:title="@string/battery_light_title"

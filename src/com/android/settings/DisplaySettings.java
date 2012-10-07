@@ -47,6 +47,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_AUTOMATIC_BACKLIGHT = "backlight_widget";
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
+    private static final String KEY_HAS_NAVIGATION_BAR = "has_navigation_bar";
     private static final String KEY_BATTERY_LIGHT = "battery_light";
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String KEY_ELECTRON_BEAM_ANIMATION_ON = "electron_beam_animation_on";
@@ -67,6 +68,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mTrackballWake;
     private CheckBoxPreference mElectronBeamAnimationOn;
     private CheckBoxPreference mElectronBeamAnimationOff;
+    private CheckBoxPreference mNavigationBar;
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
 
@@ -114,6 +116,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             } else {
                 updateLightPulseDescription();
             }
+        }
+
+        mNavigationBar = (CheckBoxPreference) findPreference(KEY_HAS_NAVIGATION_BAR);
+        if (mNavigationBar != null) {
+            mNavigationBar.setChecked(Settings.System.getInt(resolver,
+                    Settings.System.HAS_NAVIGATION_BAR, 0) == 1);
         }
 
         mBatteryPulse = (PreferenceScreen) findPreference(KEY_BATTERY_LIGHT);
@@ -316,6 +324,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         } else if (preference == mElectronBeamAnimationOff) {
             Settings.System.putInt(getContentResolver(), Settings.System.ELECTRON_BEAM_ANIMATION_OFF,
                     mElectronBeamAnimationOff.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mNavigationBar) {
+            Settings.System.putInt(getContentResolver(), Settings.System.HAS_NAVIGATION_BAR,
+                    mNavigationBar.isChecked() ? 1 : 0);
             return true;
         } else if (preference == mVolumeWake) {
             Settings.System.putInt(getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,
