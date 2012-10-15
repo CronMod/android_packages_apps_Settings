@@ -734,7 +734,7 @@
     <string name="mem_info">Bellek</string>
     <string name="baseband_version">Ana bant sürümü</string>
     <string name="kernel_version">Çekirdek sürümü</string>
-    <string name="mod_version">CyanogenMod sürümü</string>
+    <string name="mod_version">CronMod sürümü</string>
     <string name="build_number">Derleme numarası</string>
     <string name="build_date">Derleme tarihi</string>
     <string name="device_info_not_available" msgid="8062521887156825182">"Uygun değil"</string>

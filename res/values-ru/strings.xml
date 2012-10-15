@@ -2160,7 +2160,7 @@
     <string name="display_rotation_270_title">270 градусов</string>
 
     <!-- About device screen, version of modification of Android. -->
-    <string name="mod_version">Версия CyanogenMod</string>
+    <string name="mod_version">Версия CronMod</string>
     <string name="mod_version_default">Неизвестно</string>
     <!-- About device screen, build date of ROM. -->
     <string name="build_date">Дата сборки</string>

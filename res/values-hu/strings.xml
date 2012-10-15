@@ -2218,7 +2218,7 @@
     <!-- About phone screen, Free memory info -->
     <string name="mem_info">Memória</string>
     <!-- About device screen, version of modification of Android. -->
-    <string name="mod_version">CyanogenMod verzió</string>
+    <string name="mod_version">CronMod verzió</string>
     <string name="mod_version_default">Unknown</string>
     <!-- About device screen, build date of ROM. -->
     <string name="build_date">Build dátuma</string>

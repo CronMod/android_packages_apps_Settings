@@ -1953,7 +1953,7 @@ ice shows the slider widgets before the unlock option [CHAR LIMIT=28]-->
     <string name="device_hostname">Hostname des Geräts</string>
 
     <!-- About device screen, version of modification of Android. #CM -->
-    <string name="mod_version">CyanogenMod-Version</string>
+    <string name="mod_version">CronMod-Version</string>
     <string name="cpu_info">Prozessor</string>
     <string name="mem_info">Hauptspeicher</string>
     <string name="build_date">Build-Datum</string>

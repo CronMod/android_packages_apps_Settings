@@ -1922,7 +1922,7 @@
     <!-- About device screen, version of kernel. -->
     <string name="kernel_version" msgid="9192574954196167602">"Versão do kernel"</string>
     <!-- About device screen, version of modification of Android. -->
-    <string name="mod_version">Versão CyanogenMod</string>
+    <string name="mod_version">Versão CronMod</string>
     <string name="mod_version_default">Desconhecida</string>
     <!-- About device screen, build number. -->
     <string name="build_number" msgid="3075795840572241758">"Compilação"</string>

@@ -1741,7 +1741,7 @@
     <string name="memory_management_title">ניהול זכרון</string>
     <string name="menu_new_profile">פרופיל חדש</string>
     <string name="menu_new_profile_summary">הוסף והגדר פרופיל חדש</string>
-    <string name="mod_version">"גרסת CyanogenMod"</string>
+    <string name="mod_version">"גרסת CronMod"</string>
     <string name="mod_version_default">"לא ידוע"</string>
     <string name="new_profile_name">"&lt;פרופיל חדש&gt;"</string>
     <string name="notification_drawer_title">מגירת ההתראות</string>

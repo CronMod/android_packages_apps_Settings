@@ -1925,7 +1925,7 @@
     <string name="kill_app_longpress_back_summary">Zabij aplikację przytrzymując przycisk wstecz</string>
 
     <!-- About device screen, version of modification of Android. #CM -->
-    <string name="mod_version">Wersja CyanogenMod</string>
+    <string name="mod_version">Wersja CronMod</string>
     <string name="mod_version_default">Nieznana</string>
     <string name="cpu_info">Procesor</string>
     <string name="mem_info">Pamięć RAM</string>

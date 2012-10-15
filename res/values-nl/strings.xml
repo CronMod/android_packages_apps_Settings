@@ -2029,7 +2029,7 @@
     <string name="storage_switch_unavailable">Dit apparaat heeft geen uitgebreid intern geheugen</string>
 
     <!-- About settings (additions) -->
-    <string name="mod_version">CyanogenMod-versie</string>
+    <string name="mod_version">CronMod-versie</string>
     <string name="mod_version_default">Onbekend</string>
     <string name="build_date">Builddatum</string>
     <string name="system_update_settings_list_item_title" msgid="3342887311059985961">"Systeemupdates"</string>

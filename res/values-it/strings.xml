@@ -912,7 +912,7 @@
     <string name="firmware_version" msgid="4801135784886859972">"Versione di Android"</string>
     <string name="baseband_version" msgid="1848990160763524801">"Versione banda di base"</string>
     <string name="kernel_version" msgid="9192574954196167602">"Versione kernel"</string>
-    <string name="mod_version">Versione CyanogenMod</string>
+    <string name="mod_version">Versione CronMod</string>
     <string name="mod_version_default">Sconoscito</string>
     <string name="build_number" msgid="3075795840572241758">"Numero build"</string>
     <string name="build_date">"Data build"</string>

@@ -2200,7 +2200,7 @@
     <!-- About phone screen, Free memory info #CM -->
     <string name="mem_info">"Memoria"</string>
     <!-- About device screen, version of modification of Android. #CM -->
-    <string name="mod_version">"Versión CyanogenMod"</string>
+    <string name="mod_version">"Versión CronMod"</string>
     <string name="mod_version_default">"Desconocida"</string>
     <!-- About device screen, build date of ROM. #CM -->
     <string name="build_date">"Fecha de compilación"</string>

@@ -1174,7 +1174,7 @@
     <string name="baseband_version" msgid="1848990160763524801">"基带版本"</string>
     <string name="kernel_version" msgid="9192574954196167602">"内核版本"</string>
     <string name="build_number" msgid="3075795840572241758">"版本号"</string>
-    <string name="mod_version">CyanogenMod 版本</string>
+    <string name="mod_version">CronMod 版本</string>
     <string name="mod_version_default">未知</string>
     <string name="build_date">编译日期</string>
     <!-- skip 'build_date_default‘translation -->
