@@ -2258,4 +2258,12 @@
     <string name="increasing_ring_interval_3seconds">3 секунды</string>
     <string name="increasing_ring_interval_5seconds">5 секунд</string>
     <string name="increasing_ring_interval_10seconds">10 секунд</string>
+
+    <!-- Change Log strings -->
+    <string name="changelog_title">Посмотреть список изменений</string>
+    <string name="changelog_dialog">Список изменений</string>
+    <string name="changelog_loading">Загрузка списка изменений...</string>
+    <string name="changelog_error">Ошибка загрузки списка изменений...</string>
+    <string name="changelog_unknown">Неизвестно</string>
+    <string name="changelog_version">Версия</string>
 </resources>
